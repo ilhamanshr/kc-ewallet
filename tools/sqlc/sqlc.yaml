@@ -1,0 +1,16 @@
+version: "2"
+sql:
+- engine: "postgresql"
+  queries: "*.sql"
+  schema:
+  - "../../migrations"
+  gen:
+    go:
+      package: "postgres"
+      out: "../../domains/repository/postgres"
+overrides:
+  go:
+    overrides:
+    - db_type: "pg_catalog.numeric"
+      go_type:
+        type: "float64"

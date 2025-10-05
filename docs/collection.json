@@ -1,0 +1,1372 @@
+{
+	"info": {
+		"_postman_id": "cd1f2c22-de77-4449-94eb-0eac442a66e7",
+		"name": "KC EWallet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18187218"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"ilhamanshr\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"ilhamanshr\",\n    \"password\": \"12345678\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/users",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Permissions-Policy",
+									"value": "geolocation=(), camera=()"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=2592000"
+								},
+								{
+									"key": "X-Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "ff027fc8-7ac9-4d52-afcd-fa5f3632a840"
+								},
+								{
+									"key": "X-Webkit-Csp",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Oct 2025 08:58:26 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"success\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "400 user already exists",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"ilhamanshr\",\n    \"password\": \"12345678\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/users",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Permissions-Policy",
+									"value": "geolocation=(), camera=()"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=2592000"
+								},
+								{
+									"key": "X-Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "1398139e-93a3-4d7f-93a0-493c14b279ea"
+								},
+								{
+									"key": "X-Webkit-Csp",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Oct 2025 08:58:35 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "201"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"message\": \"username already exists\",\n    \"error_detail\": {\n        \"id_message\": \"\",\n        \"en_message\": \"\",\n        \"redirect_code\": 0,\n        \"code\": \"\"\n    },\n    \"error_code\": \"400\",\n    \"errors\": [\n        \"username already exists\"\n    ],\n    \"fields\": null\n}"
+						},
+						{
+							"name": "422 invalid password length",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"ilhamanshr2\",\n    \"password\": \"1234\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/users",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Permissions-Policy",
+									"value": "geolocation=(), camera=()"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=2592000"
+								},
+								{
+									"key": "X-Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "ac689639-9b90-4ed5-8af6-f12adff6a76e"
+								},
+								{
+									"key": "X-Webkit-Csp",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Oct 2025 09:00:34 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "294"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"message\": \"Password must be longer than or equal to 6\",\n    \"error_detail\": {\n        \"id_message\": \"\",\n        \"en_message\": \"\",\n        \"redirect_code\": 0,\n        \"code\": \"\"\n    },\n    \"error_code\": \"422\",\n    \"errors\": [\n        \"Password must be longer than or equal to 6\"\n    ],\n    \"fields\": {\n        \"Password\": [\n            \"Password must be longer than or equal to 6\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let jsonData = pm.response.json();",
+									"",
+									"if (jsonData.data && jsonData.data.access_token) {",
+									"    pm.environment.set(\"access_token\", jsonData.data.access_token);",
+									"    console.log(\"Access token saved to collection variable:\", jsonData.data.access_token);",
+									"} else {",
+									"    console.log(\"No access token found in response\");",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"ilhamanshr\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/users/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"ilhamanshr\",\n    \"password\": \"12345678\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/users/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Permissions-Policy",
+									"value": "geolocation=(), camera=()"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=2592000"
+								},
+								{
+									"key": "X-Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "eb051ffc-2538-475d-9dea-4ea3b13ef543"
+								},
+								{
+									"key": "X-Webkit-Csp",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Oct 2025 09:48:23 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "344"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"success\",\n    \"data\": {\n        \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJrYy1ld2FsbGV0IiwiZXhwIjoxNzU5NTcxMzAzLCJ1c2VyX2lkIjoxLCJyb2xlX2dyb3VwIjoiIiwicm9sZV9pZCI6IiIsInJvbGUiOiIiLCJwbGF0Zm9ybSI6IiIsImZ1bGxfbmFtZSI6IiJ9.VnCrAiPa6HGN3oVOv_xcwBIvYvJNwB3mdjNgdOfJhL0\",\n        \"user\": {\n            \"id\": 1,\n            \"username\": \"ilhamanshr\"\n        }\n    }\n}"
+						},
+						{
+							"name": "401 unauthorize",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"ilhamanshr\",\n    \"password\": \"123456789\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/users/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"login"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Permissions-Policy",
+									"value": "geolocation=(), camera=()"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=2592000"
+								},
+								{
+									"key": "X-Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "bf10057b-aa8d-410a-a33d-cdffbddb154b"
+								},
+								{
+									"key": "X-Webkit-Csp",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Oct 2025 09:49:07 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "193"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"message\": \"invalid credentials\",\n    \"error_detail\": {\n        \"id_message\": \"\",\n        \"en_message\": \"\",\n        \"redirect_code\": 0,\n        \"code\": \"\"\n    },\n    \"error_code\": \"401\",\n    \"errors\": [\n        \"invalid credentials\"\n    ],\n    \"fields\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get User Info",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/users",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Permissions-Policy",
+									"value": "geolocation=(), camera=()"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=2592000"
+								},
+								{
+									"key": "X-Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "d219e4f8-f11d-42d1-939e-4fbbd86d0897"
+								},
+								{
+									"key": "X-Webkit-Csp",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Oct 2025 11:01:39 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "80"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"success\",\n    \"data\": {\n        \"id\": 1,\n        \"username\": \"ilhamanshr\"\n    }\n}"
+						},
+						{
+							"name": "401 expired token",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/users",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Permissions-Policy",
+									"value": "geolocation=(), camera=()"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=2592000"
+								},
+								{
+									"key": "X-Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "051a8aa6-040c-433e-9ec1-3bdd28905449"
+								},
+								{
+									"key": "X-Webkit-Csp",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Oct 2025 11:10:13 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "181"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"message\": \"expired token\",\n    \"error_detail\": {\n        \"id_message\": \"\",\n        \"en_message\": \"\",\n        \"redirect_code\": 0,\n        \"code\": \"\"\n    },\n    \"error_code\": \"401\",\n    \"errors\": [\n        \"expired token\"\n    ],\n    \"fields\": null\n}"
+						},
+						{
+							"name": "401 invalid token",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/users",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Permissions-Policy",
+									"value": "geolocation=(), camera=()"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=2592000"
+								},
+								{
+									"key": "X-Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "f60a70f2-3c5b-4f6f-81e9-527feae685d6"
+								},
+								{
+									"key": "X-Webkit-Csp",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Oct 2025 11:10:42 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "181"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"message\": \"invalid token\",\n    \"error_detail\": {\n        \"id_message\": \"\",\n        \"en_message\": \"\",\n        \"redirect_code\": 0,\n        \"code\": \"\"\n    },\n    \"error_code\": \"401\",\n    \"errors\": [\n        \"invalid token\"\n    ],\n    \"fields\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Transactions",
+			"item": [
+				{
+					"name": "Credit (Top-up)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\": 1000000\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/transactions/credit",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"transactions",
+								"credit"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "401 invalid token",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"amount\": 1000000\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/transactions/credit",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"transactions",
+										"credit"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Permissions-Policy",
+									"value": "geolocation=(), camera=()"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=2592000"
+								},
+								{
+									"key": "X-Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "5fb74d15-183c-4b07-a824-8088ecfe2e72"
+								},
+								{
+									"key": "X-Webkit-Csp",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Oct 2025 11:23:08 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "203"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"message\": \"invalid token\",\n    \"error_detail\": {\n        \"id_message\": \"Harap login kembali\",\n        \"en_message\": \"\",\n        \"redirect_code\": 0,\n        \"code\": \"ER006\"\n    },\n    \"error_code\": \"401\",\n    \"errors\": [\n        \"invalid token\"\n    ],\n    \"fields\": {}\n}"
+						},
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"amount\": 1000000\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/transactions/credit",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"transactions",
+										"credit"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Permissions-Policy",
+									"value": "geolocation=(), camera=()"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=2592000"
+								},
+								{
+									"key": "X-Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "722c5815-4fd0-4df4-b12d-06189d9b6a2f"
+								},
+								{
+									"key": "X-Webkit-Csp",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Oct 2025 11:25:20 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "90"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"success\",\n    \"data\": {\n        \"transaction_id\": 6,\n        \"new_balance\": 6000000\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Debit (Withdraw)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\": 1000000\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/transactions/debit",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"transactions",
+								"debit"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "401 invalid token",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"amount\": 1000000\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/transactions/debit",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"transactions",
+										"debit"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Permissions-Policy",
+									"value": "geolocation=(), camera=()"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=2592000"
+								},
+								{
+									"key": "X-Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "a60c2764-c351-4cda-be9f-1fce9c68c7dc"
+								},
+								{
+									"key": "X-Webkit-Csp",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Oct 2025 11:25:45 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "203"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"message\": \"invalid token\",\n    \"error_detail\": {\n        \"id_message\": \"Harap login kembali\",\n        \"en_message\": \"\",\n        \"redirect_code\": 0,\n        \"code\": \"ER006\"\n    },\n    \"error_code\": \"401\",\n    \"errors\": [\n        \"invalid token\"\n    ],\n    \"fields\": {}\n}"
+						},
+						{
+							"name": "400 insufficient funds",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"amount\": 10000000\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/transactions/debit",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"transactions",
+										"debit"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Permissions-Policy",
+									"value": "geolocation=(), camera=()"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=2592000"
+								},
+								{
+									"key": "X-Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "89686002-855f-43eb-b79f-218291641ffa"
+								},
+								{
+									"key": "X-Webkit-Csp",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Oct 2025 11:39:22 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "191"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"message\": \"Insufficient funds\",\n    \"error_detail\": {\n        \"id_message\": \"\",\n        \"en_message\": \"\",\n        \"redirect_code\": 0,\n        \"code\": \"\"\n    },\n    \"error_code\": \"400\",\n    \"errors\": [\n        \"Insufficient funds\"\n    ],\n    \"fields\": null\n}"
+						},
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"amount\": 1000000\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/transactions/debit",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"transactions",
+										"debit"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Permissions-Policy",
+									"value": "geolocation=(), camera=()"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=2592000"
+								},
+								{
+									"key": "X-Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "3ab916db-17b6-4fc2-a5ce-ed187f2bac9b"
+								},
+								{
+									"key": "X-Webkit-Csp",
+									"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Oct 2025 11:39:52 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "90"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"success\",\n    \"data\": {\n        \"transaction_id\": 7,\n        \"new_balance\": 5000000\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "HealthZ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/healthz",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"healthz"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/healthz",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"healthz"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Permissions-Policy",
+							"value": "geolocation=(), camera=()"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=2592000"
+						},
+						{
+							"key": "X-Content-Security-Policy",
+							"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "d4330ab6-b35d-4eb0-9ed2-e809fce1daca"
+						},
+						{
+							"key": "X-Webkit-Csp",
+							"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 Oct 2025 08:15:52 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "7"
+						}
+					],
+					"cookie": [],
+					"body": "healthy"
+				}
+			]
+		},
+		{
+			"name": "ReadyZ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/readyz",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"readyz"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/readyz",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"readyz"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Permissions-Policy",
+							"value": "geolocation=(), camera=()"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=2592000"
+						},
+						{
+							"key": "X-Content-Security-Policy",
+							"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "149cbe33-97da-4d0a-a199-220d7cb737b5"
+						},
+						{
+							"key": "X-Webkit-Csp",
+							"value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: ; font-src 'self' https://fonts.gstatic.com;"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 Oct 2025 08:15:57 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "5"
+						}
+					],
+					"cookie": [],
+					"body": "ready"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "access_token",
+			"value": ""
+		}
+	]
+}

@@ -1,0 +1,60 @@
+# docker-compose.yml
+version: '3'
+services:
+  redis:
+    image: "redis:latest"
+    container_name: "my_redis"
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+  database:
+    image: "postgres" # use latest official postgres version
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 1000M
+          # pids: 1
+        reservations:
+          cpus: '0.25'
+          memory: 20M
+    environment:
+      POSTGRES_USER: sonar
+      POSTGRES_PASSWORD: sonar
+    volumes:
+      - database-data:/var/lib/postgresql/data/
+      - ../db-init:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+  sonarqube:
+    depends_on:
+      - database
+    image: sonarqube:community
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 4000M
+          # pids: 1
+        reservations:
+          cpus: '0.25'
+          memory: 20M
+    environment:
+      SONAR_JDBC_URL: jdbc:postgresql://database:5432/sonar
+      SONAR_JDBC_USERNAME: sonar
+      SONAR_JDBC_PASSWORD: sonar
+    volumes:
+      - sonarqube_data:/opt/sonarqube/data
+      - sonarqube_extensions:/opt/sonarqube/extensions
+      - sonarqube_logs:/opt/sonarqube/logs
+    ports:
+      - "9000:9000"
+
+volumes:
+  database-data: # named volumes can be managed easier using docker-compose
+  sonarqube_data:
+  sonarqube_extensions:
+  sonarqube_logs:
+  redis-data:
+  nats-data:
