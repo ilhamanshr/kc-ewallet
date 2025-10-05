@@ -42,8 +42,7 @@ You can explore and test the API using the provided **Postman Collection**.
 3. The collection includes:
    - 🔑 Authentication endpoints  
    - 👤 User endpoints  
-   - 📝 Article endpoints  
-   - 🏷️ Tag endpoints  
+   - 💸 Transaction endpoints  
 
 ---
 
